@@ -5,9 +5,9 @@ This is a [fork](https://github.com/AGSPhoenix/sheepit-docker) of [AGSPhoenix's 
 ## Instructions
 Insert your username and password in-place off \<user\> and \<pass\>.
 
-It is recommended to use a public key instead of your actual sheepit account password for authentication.
-Public keys can be created in your [Sheepit account page](https://www.sheepit-renderfarm.com/account.php?mode=profile) under the Keys tab.
-A possible comment of your choice for the public key could be 'docker'
+It is recommended to use a public key instead of your actual sheepit account password for authentication.  
+Public keys can be created in your [Sheepit account page](https://www.sheepit-renderfarm.com/account.php?mode=profile) under the Keys tab.  
+A possible comment of your choice for the public key could be 'docker'.  
 
 ```
 docker run -d \
