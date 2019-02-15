@@ -12,7 +12,7 @@ A possible comment of your choice for the public key could be 'docker'
 ```
 docker run -d \
  --name "sheepit" \
- --hostname "sheepit-docker"
+ --hostname "sheepit-docker" \
  --init \
  -e user_name=<user> \
  -e user_password=<pass> \
