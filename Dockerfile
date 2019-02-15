@@ -1,7 +1,12 @@
 FROM debian:stretch-slim
 
 # File Author / Maintainer
-MAINTAINER AGSPhoenix
+LABEL maintainer=DaCoolX
+
+ARG DEBIAN_FRONTEND=noninteractive
+# Makes the apt-get process aware
+# of the docker build process env
+# so it doesn't complain as much
 
 RUN \
 # MAN folder needed for jre install
@@ -18,7 +23,7 @@ RUN \
 	libgl1-mesa-glx \
 	libglu1-mesa \
 	libxi6 \
- 	libxrender1 \
+	libxrender1 \
 	libxfixes3
 
 ADD startrenderer.sh /sheep/startrenderer.sh
