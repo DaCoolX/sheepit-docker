@@ -23,9 +23,9 @@ You can also specify the `cpu` variable to override autodetection; like `-e cpu=
 
 ## Extra bits
 [Docker Hub page](https://hub.docker.com/r/dacoolx/sheepit-docker)  
-[GitHub page](https://github.com/DaCoolX/sheepit-docker/)
+[GitHub page](https://github.com/DaCoolX/sheepit-docker/)  
 [Upstream Docker Hub page](https://hub.docker.com/r/agsphoenix/sheepit-docker/)  
-[Upstream GitHub page](https://github.com/AGSPhoenix/sheepit-docker)
+[Upstream GitHub page](https://github.com/AGSPhoenix/sheepit-docker)  
 
 [SheepIt client GitHub repo](https://github.com/laurent-clouet/sheepit-client)  
-[SheepIt site](https://www.sheepit-renderfarm.com/)
+[SheepIt site](https://www.sheepit-renderfarm.com/)  
