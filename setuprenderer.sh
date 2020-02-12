@@ -8,9 +8,7 @@ useradd --no-create-home \
 	--inactive 0 \
 	--shell /usr/sbin/nologin \
 	sheepit
-chown sheepit ./runrenderer.sh
-chmod ug+x ./runrenderer.sh
-chown -R sheepit:sheepit /sheep-cache
-su --command "/sheep/runrenderer.sh" \
-	--preserve-environment
-	sheepit
+chown -c sheepit:sheepit ./runrenderer.sh
+chmod -c ug+x ./runrenderer.sh
+chown -Rc sheepit:sheepit /sheep-cache
+sudo -E -u sheepit "/sheep/runrenderer.sh"

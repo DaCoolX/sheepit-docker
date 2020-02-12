@@ -17,6 +17,7 @@ RUN \
   && apt-get install -y --no-install-recommends \
 	openjdk-11-jre-headless \
 	curl \
+	sudo \
 	#Blender dependencies
 	libsdl1.2debian \
 	libxxf86vm1 \
