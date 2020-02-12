@@ -26,13 +26,17 @@ RUN \
 	libxrender1 \
 	libxfixes3
 
-ADD startrenderer.sh /sheep/startrenderer.sh
-RUN chmod +x /sheep/startrenderer.sh
+ADD runrenderer.sh /sheep/runrenderer.sh
+ADD setuprenderer.sh /sheep/setuprenderer.sh
+RUN chmod u+x /sheep/setuprenderer.sh
 
+VOLUME /sheep-cache
 WORKDIR /sheep
 
 ENV user_name ""
 ENV user_password ""
-ENV cpu "0"
+ENV extra_opt ""
+ENV user_UID "1000"
+ENV user_GID "1000"
 
-CMD ./startrenderer.sh
+ENTRYPOINT ./setuprenderer.sh
