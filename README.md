@@ -38,7 +38,7 @@ This only takes effect if two processes compete for CPU time, if only one proces
 all remaining CPU time will be automatically allotted to the single process regardless of priority
 
 
-The author personally uses `--cpuset-shares=256`.
+The author personally uses `--cpuset-shares=128`.
 On a host with multiple running services it is good courtesy and common sense to use sheepit only with enough CPU time and/or CPU cores to spare.
 On a system with an idle load of 15% with only occasional heavy CPU loads, running sheepit with lower priority makes sense,
 or to reserve certain cores by allotting a lot of shares on those containers using those limited set of cores.
