@@ -3,7 +3,7 @@
 This is a [fork](https://github.com/AGSPhoenix/sheepit-docker) of [AGSPhoenix's sheepit-docker container](https://hub.docker.com/r/agsphoenix/sheepit-docker/) with some additional improvements and updated instructions
 
 ## Instructions
-Insert your username and password in-place off \<user\> and \<pass\>.
+Insert your username and password/public-key in-place off \<user\> and \<pass\>.
 
 It is recommended to use a public key instead of your actual sheepit account password for authentication.  
 Public keys can be created in your [Sheepit account page](https://www.sheepit-renderfarm.com/account.php?mode=profile) under the Keys tab.  
@@ -18,6 +18,12 @@ docker run -d \
  -e user_password=<pass> \
  dacoolx/sheepit-docker:latest
 ```
+
+## Extra sheepit parameters
+You can pass additional parameters to sheepit such as for example `-verbose` with the help of the `extra_opt` environment variable like so `-e extra_opt="--verbose"`.
+
+## User and Group IDs
+If you want to change the UID and GID of the running user you can use the `user_UID` and `user_GID` environment variables respectivly.
 
 ## CPU cores and Priority
 
@@ -46,7 +52,7 @@ Should the host machine be required for CPU-heavy loads that would compete with 
 the best approach is to pause sheepit for the time being in order to not skew off to far from the approximated performance expected by the sheepit scheduler.
 
 
-## Possible future features:
+## Possible future features
 Signal handling (Seems very unlikely)  
 Base image on alpine (Very hard, possibly need to compile many deps ourselves)  
 
