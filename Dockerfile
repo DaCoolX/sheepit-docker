@@ -17,10 +17,10 @@ RUN \
 	openjdk-11-jre-headless \
 	curl \
 	#Blender dependencies
+	libglu1-mesa \
 	libsdl1.2debian \
 	libxxf86vm1 \
 	libgl1-mesa-glx \
-	libglu1-mesa \
 	libxi6 \
 	libxrender1 \
 	libxfixes3

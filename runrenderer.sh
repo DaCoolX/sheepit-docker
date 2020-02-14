@@ -1,6 +1,8 @@
 #!/bin/bash
 
 echo "Checking for client updates..."
+cd /sheep-cache
+export HOME=/sheep-cache
 latestVersion=`curl --silent --head https://www.sheepit-renderfarm.com/media/applet/client-latest.php|grep -Po 'Content-Disposition:.*filename="?\Ksheepit-client-[\d\.]+'`
 
 if [ ! -e $latestVersion.jar ]; then
@@ -11,6 +13,7 @@ if [ ! -e $latestVersion.jar ]; then
 fi
 
 echo "Starting client:"
+
 java -jar /sheep-cache/$latestVersion.jar \
 	-ui text \
 	-login $user_name \
