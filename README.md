@@ -44,7 +44,17 @@ On a system with an idle load of 15% with only occasional heavy CPU loads, runni
 or to reserve certain cores by allotting a lot of shares on those containers using those limited set of cores.
 Should the host machine be required for CPU-heavy loads that would compete with sheepit,
 the best approach is to pause sheepit for the time being in order to not skew off to far from the approximated performance expected by the sheepit scheduler.
- 
+
+
+## Todo
+
+Make non-root useage possible
+Make sure for all blender versions dependencies are met
+
+Possible future features:
+Signal handling (Seems very unlikely)
+Base image on alpine (possibly need to compile deps ourselves)
+
 
 ## Extra bits
 [Docker Hub page](https://hub.docker.com/r/dacoolx/sheepit-docker)  
