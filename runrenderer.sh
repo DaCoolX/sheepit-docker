@@ -11,7 +11,7 @@ if [ ! -e $latestVersion.jar ]; then
 fi
 
 echo "Starting client:"
-java -jar /sheep/$latestVersion.jar \
+java -jar /sheep-cache/$latestVersion.jar \
 	-ui text \
 	-login $user_name \
 	-password $user_password \

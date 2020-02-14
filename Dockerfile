@@ -11,7 +11,6 @@ ARG DEBIAN_FRONTEND=noninteractive
 RUN \
 # MAN folder needed for jre install
      mkdir -p /usr/share/man/man1 \
-  && mkdir -p /sheep/cache \
 # Install JRE and curl
   && apt-get update \
   && apt-get install -y --no-install-recommends \
@@ -31,7 +30,7 @@ ADD setuprenderer.sh /sheep/setuprenderer.sh
 RUN chmod u+x /sheep/setuprenderer.sh
 
 VOLUME /sheep-cache
-WORKDIR /sheep
+WORKDIR /sheep-cache
 
 ENV user_name ""
 ENV user_password ""
@@ -39,4 +38,4 @@ ENV extra_opt ""
 ENV user_UID "1000"
 ENV user_GID "1000"
 
-ENTRYPOINT ./setuprenderer.sh
+ENTRYPOINT /sheep/setuprenderer.sh
