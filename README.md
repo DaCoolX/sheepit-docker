@@ -1,6 +1,7 @@
 # A simple dockerized SheepIt render farm client
 
-This is a [fork](https://github.com/AGSPhoenix/sheepit-docker) of [AGSPhoenix's sheepit-docker container](https://hub.docker.com/r/agsphoenix/sheepit-docker/) with some additional improvements and updated instructions
+This is a [fork](https://github.com/AGSPhoenix/sheepit-docker) of [AGSPhoenix's sheepit-docker container](https://hub.docker.com/r/agsphoenix/sheepit-docker/) with some additional improvements and updated instructions.
+Also being able to run without root while still being open source as opposed to [mydigitalwalk's sheepit-docker container](https://hub.docker.com/r/mydigitalwalk/sheepit-docker).
 
 ## Instructions
 Insert your username and password/public-key in-place off \<user\> and \<pass\>.
