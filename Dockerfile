@@ -20,9 +20,9 @@ RUN \
 	libglu1-mesa
 
 	#Blender dependencies of other sheepit containers explained:
-
-	#libsdl1.2debian was needed in the past
-	#libgl1-mesa-glx was needed in the past
+	#needed in the past:
+	#libsdl1.2debian
+	#libgl1-mesa-glx
 
 	#libglu1-mesa deps:
 	#libxxf86vm1
