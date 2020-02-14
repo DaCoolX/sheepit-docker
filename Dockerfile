@@ -1,6 +1,6 @@
 FROM debian:buster-slim
 
-# File Author / Maintainer
+# Maintainer
 LABEL maintainer=DaCoolX
 
 ARG DEBIAN_FRONTEND=noninteractive
@@ -13,17 +13,25 @@ RUN \
      mkdir -p /usr/share/man/man1 \
 # Install JRE and curl
   && apt-get update \
+  && apt-get upgrade -y \
   && apt-get install -y --no-install-recommends \
 	openjdk-11-jre-headless \
 	curl \
-	#Blender dependencies
-	libglu1-mesa \
-	libsdl1.2debian \
-	libxxf86vm1 \
-	libgl1-mesa-glx \
-	libxi6 \
-	libxrender1 \
-	libxfixes3
+	libglu1-mesa
+
+	#Blender dependencies of other sheepit containers explained:
+
+	#libsdl1.2debian was needed in the past
+	#libgl1-mesa-glx was needed in the past
+
+	#libglu1-mesa deps:
+	#libxxf86vm1
+	#libxfixes3
+
+	#openjdk-11-jre-headless deps:
+	#libfreetype6
+	#libxi6
+	#libxrender1
 
 ADD runrenderer.sh /sheep/runrenderer.sh
 ADD setuprenderer.sh /sheep/setuprenderer.sh
