@@ -34,7 +34,7 @@ docker run -d \
  -e user_password=<pass> \
  -e user_UID=1000 \
  -e user_GID=1000 \
- -e extra_opt="--verbose" \
+ -e extra_opt="-rendertime 120" \
  --cpuset-cpus="0-3" \
  --cpuset-shares=128 \
  dacoolx/sheepit-docker:latest
