@@ -53,9 +53,15 @@ Should the host machine be required for CPU-heavy loads that would compete with 
 the best approach is to pause sheepit for the time being in order to not skew off to far from the approximated performance expected by the sheepit scheduler.
 
 
-## Possible future features
-Signal handling (Seems very unlikely)  
-Base image on alpine (Very hard, possibly need to compile many deps ourselves)  
+## Todo and other possible future features
+Short term:  
+Add docker-compose example  
+Add advanced `docker run` example  
+Add and clarify memory options  
+
+Long term:  
+Shell script that handles signals, graceful shutdown/restarts, automatic updates, crash/freeze recovery  
+Base image on alpine (Very very hard, possibly need to compile many deps ourselves)  
 
 
 ## Extra bits
