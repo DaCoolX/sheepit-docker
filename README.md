@@ -10,6 +10,9 @@ It is recommended to use a public key instead of your actual sheepit account pas
 Public keys can be created in your [Sheepit account page](https://www.sheepit-renderfarm.com/account.php?mode=profile) under the Keys tab.  
 A possible comment of your choice for the public key could be 'docker'.  
 
+
+### Simple run example
+
 ```
 docker run -d \
  --name "sheepit" \
@@ -20,13 +23,32 @@ docker run -d \
  dacoolx/sheepit-docker:latest
 ```
 
-## Extra sheepit parameters
+### Fully featured run example
+
+```
+docker run -d \
+ --name "sheepit" \
+ --hostname "sheepit-docker" \
+ --init \
+ -e user_name=<user> \
+ -e user_password=<pass> \
+ -e user_UID=1000 \
+ -e user_GID=1000 \
+ -e extra_opt="--verbose" \
+ --cpuset-cpus="0-3" \
+ --cpuset-shares=128 \
+ dacoolx/sheepit-docker:latest
+```
+
+### Extra sheepit parameters
+
 You can pass additional parameters to sheepit such as for example `-verbose` with the help of the `extra_opt` environment variable like so `-e extra_opt="--verbose"`.
 
-## User and Group IDs
+### User and Group IDs
+
 If you want to change the UID and GID of the running user you can use the `user_UID` and `user_GID` environment variables respectivly.
 
-## CPU cores and Priority
+### CPU cores and Priority
 
 To configure how and which cpu cores to use it is recommended to use `--cpuset-cpus=""` and `--cpuset-shares="".`
 
