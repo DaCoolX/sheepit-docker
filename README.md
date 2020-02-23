@@ -76,12 +76,13 @@ the best approach is to pause sheepit for the time being in order to not skew of
 
 
 ## Todo and other possible future features
-Short term:  
+
+###### Short term:  
 Add docker-compose example  
 Add advanced `docker run` example  
 Add and clarify memory options  
 
-Long term:  
+###### Long term:  
 Shell script that handles signals, graceful shutdown/restarts, automatic updates, crash/freeze recovery  
 Base image on alpine (Very very hard, possibly need to compile many deps ourselves)  
 
