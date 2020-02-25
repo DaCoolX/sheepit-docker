@@ -4,7 +4,7 @@ This is a [fork](https://github.com/AGSPhoenix/sheepit-docker) of [AGSPhoenix's 
 Also being able to run without root while still being open source as opposed to [mydigitalwalk's sheepit-docker container](https://hub.docker.com/r/mydigitalwalk/sheepit-docker).
 
 ## Instructions
-Insert your username and password/public-key in-place off \<user\> and \<pass\>.
+Insert your username and password/public-key in-place off `\<user\>` and `\<pass\>`.
 
 It is recommended to use a public key instead of your actual sheepit account password for authentication.  
 Public keys can be created in your [Sheepit account page](https://www.sheepit-renderfarm.com/account.php?mode=profile) under the Keys tab.  
