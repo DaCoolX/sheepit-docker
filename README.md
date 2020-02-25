@@ -10,6 +10,8 @@ It is recommended to use a public key instead of your actual sheepit account pas
 Public keys can be created in your [Sheepit account page](https://www.sheepit-renderfarm.com/account.php?mode=profile) under the Keys tab.  
 A possible comment of your choice for the public key could be 'docker'.  
 
+The name that is shown for your machine in your profile on SheepIt is dictated by the hostname that is set with `--hostname`, default being `sheepit-docker`.  
+It is only visible to you, moderators and administrators.  
 
 ### Simple run example
 
