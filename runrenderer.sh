@@ -3,7 +3,7 @@
 echo "Checking for client updates..."
 cd /sheep-cache
 
-latestVersion=`curl --silent --head https://www.sheepit-renderfarm.com/media/applet/client-latest.php | grep -Po 'Content-Disposition:.*filename="?\Ksheepit-client-[\d\.]+'`
+latestVersion=`curl --silent --head https://www.sheepit-renderfarm.com/media/applet/client-latest.php | grep -Po 'content-disposition:.*filename="?\Ksheepit-client-[\d\.]+'`
 
 if [ ! -e $latestVersion.jar ]; then
 	echo "Updating client..."
