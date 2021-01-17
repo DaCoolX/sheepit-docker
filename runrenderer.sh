@@ -7,8 +7,12 @@ latestVersion=`curl --silent --head https://www.sheepit-renderfarm.com/media/app
     grep -Po '(?i)content-disposition:.*filename="?(?-i)\Ksheepit-client-[\d\.]+\d'`
     
 if [ -z $latestVersion ]; then
-    #Empty latestVersion hints at a critical error
-    echo Failed parsing version information! Aborting.
+    #Empty latestVersion is a good indicator of a critical failure
+    echo !!! Failed parsing version information! Aborting !!!
+    echo Possible causes and troubleshooting steps:
+    echo 1. Check for internet connectivity \(Routes, DNS, Proxy\)
+    echo 2. Check the status of SheepIt via the SheepIt website: https://www.sheepit-renderfarm.com/
+    echo 3. Open an issue on Github if problems persists after 1. and 2.
     exit 1
 elif [ ! -e $latestVersion.jar ]; then
 	echo "Updating client..."
