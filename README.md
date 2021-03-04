@@ -75,6 +75,7 @@ On a system with an idle load of 15% with only occasional heavy CPU loads, runni
 or to reserve certain cores by allotting a lot of shares on those containers using those limited set of cores.
 Should the host machine be required for CPU-heavy loads that would compete with sheepit,
 the best approach is to pause sheepit for the time being in order to not skew off to far from the approximated performance expected by the sheepit scheduler.
+Or to restart sheepit to reset the power percentage calculation, taking advantage of mismatches is highly frowned upon.
 
 
 ## Todo and other possible future features
