@@ -5,7 +5,7 @@ cd /sheep-cache
 
 latestVersion=$(curl --silent --head https://www.sheepit-renderfarm.com/media/applet/client-latest.php | \
     grep -Po '(?i)content-disposition:.*filename="?(?-i)\Ksheepit-client-[\d\.]+\d')
-    
+
 if [ -z "$latestVersion" ]; then
     #Empty latestVersion is a good indicator of a critical failure
     echo "!!! Failed parsing version information! Aborting !!!"
