@@ -17,7 +17,9 @@ RUN \
 	apt-get install -y --no-install-recommends \
 		openjdk-11-jre-headless \
 		curl \
-		libglu1-mesa && \
+		libglu1-mesa \
+		libxi6 \
+		libxrender1 && \
 	# Blender dependencies of other sheepit containers explained:
 	# needed in the past:
 	#	libsdl1.2debian
@@ -27,8 +29,6 @@ RUN \
 	#	libxfixes3
 	# openjdk-11-jre-headless deps:
 	#	libfreetype6
-	#	libxi6
-	#	libxrender1
 	apt-get -y autoremove && \
 	apt-get -y clean && \
 	rm -rf \
