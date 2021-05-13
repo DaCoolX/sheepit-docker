@@ -3,6 +3,10 @@
 This is a [fork](https://github.com/AGSPhoenix/sheepit-docker) of [AGSPhoenix's sheepit-docker container](https://hub.docker.com/r/agsphoenix/sheepit-docker/) with some additional improvements and updated instructions.
 Also being able to run without root while still being open source as opposed to [mydigitalwalk's sheepit-docker container](https://hub.docker.com/r/mydigitalwalk/sheepit-docker).
 
+## Beta client
+Do note that this is the branch with a beta client and hardcoded client version.
+For use of a container in production, refer to the [master branch](https://github.com/DaCoolX/sheepit-docker/)
+
 ## Instructions
 Insert your username and password/public-key in-place off `<user>` and `<pass>`.
 
@@ -22,7 +26,7 @@ docker run -d \
  --init \
  -e user_name=<user> \
  -e user_password=<pass> \
- dacoolx/sheepit-docker:latest
+ dacoolx/sheepit-docker:beta_client
 ```
 
 ### Fully featured run example
@@ -39,7 +43,7 @@ docker run -d \
  -e extra_opt="-rendertime 120" \
  --cpuset-cpus="0-3" \
  --cpuset-shares=128 \
- dacoolx/sheepit-docker:latest
+ dacoolx/sheepit-docker:beta_client
 ```
 
 ### Extra sheepit parameters
