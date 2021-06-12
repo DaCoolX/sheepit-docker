@@ -3,7 +3,7 @@
 echo "Checking for beta client..."
 cd /sheep-cache
 
-latestVersion=sheepit-client-6.21131.0
+latestVersion=sheepit-client-6.21163.0
 
 if [ ! -e $latestVersion.jar ]; then
 	curl https://www.sheepit-renderfarm.com/media/applet/$latestVersion.jar -o $latestVersion.jar
