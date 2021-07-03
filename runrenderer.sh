@@ -15,7 +15,7 @@ if [ -z "$latestVersion" ]; then
     echo "3. Open an issue on Github if problems persists after 1. and 2."
     exit 1
 elif [ ! -e $latestVersion.jar ]; then
-	echo "Updating client..."
+	echo "Updating client to version $latestVersion..."
 	rm -f sheepit-client*.jar
 	#Download new client.
 	curl https://www.sheepit-renderfarm.com/media/applet/client-latest.php -o $latestVersion.jar
